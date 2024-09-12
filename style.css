@@ -27,6 +27,10 @@
 .header{
     height: 10vh;
     width: 100%;
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
 }
 .html{
     font-size: 62.5%;
@@ -58,11 +62,28 @@ nav ul li a:hover{
     color: var(--main-color);
     transition: .3s;
 }
+
+.heading{
+    text-align: center;
+   margin-top: 30px;
+    padding:2rem 0;
+    padding-bottom: 3rem;
+    font-size: 2.5rem;
+    color:white
+}
+
+.heading span{
+    background: var(--main-color);
+    color:#000000;
+    display: inline-block;
+    padding:.5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
 .home{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(./images/image5.jpg) no-repeat;
+    background: url(./images/image7.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     padding-top: 17rem;
@@ -77,4 +98,91 @@ nav ul li a:hover{
     color:var(--text-color);
     font-size: 3rem;
 
+}
+
+.recipies{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.recipies h4{
+    color: var(--bg-color);
+    background: fixed;
+}
+.recipies p{
+    color: var(--bg-color);
+    background: fixed;
+}
+
+.recipies-container{
+    padding-left: 140px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.recipies-container .recipie-box{
+    height: 400px;
+    width: 350px;
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+.recipie-box img{
+    
+    height: 400px;
+    width: 350px;
+}
+.recipie-box:hover img{
+    transform: scale(1.1);
+}
+
+.recipie-box .recipie-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.recipie-box:hover .recipie-layer{
+    transform: translateY(0);
+}
+
+.recipie-layer h4{
+    font-size: 3rem;
+    color: var(--bg-color);
+}
+
+.recipie-layer p{
+    font-size: 1.6rem;
+    max-width: .3rem 0 1rem; 
+}
+
+.recipie-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.recipie-layer a i{
+    font-size: 2rem;
+    color: var(--second-bg-color);
 }
